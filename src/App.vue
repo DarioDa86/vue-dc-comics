@@ -32,4 +32,3 @@ export default {
   @import '../src/assets/style/common';
   @import '../src/assets/style/variables';
 </style>
- 
