@@ -6,16 +6,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">CHARACTERS</a> </li>
-                <li><a class="active" href="#">COMICS</a></li>
-                <li><a href="#">MOVIES</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">GAMES</a></li>
-                <li><a href="#">COLLECTIBLES</a></li>
-                <li><a href="#">VIDEOS</a></li>
-                <li><a href="#">FANS</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">SHOP</a></li>
+                <li v-for="(link, index) in menu" :key="index">
+                    <a :href="link.url" >{{link.text}}</a> 
+                </li>
             </ul>
         </nav>
       </div>
@@ -24,7 +17,63 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: "Header",
+    data() {
+        return {
+            menu: [
+                {
+                    text: "CHARACTERS",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "COMICS",
+                    url:"#",
+                    current: "true",
+                },
+                {
+                    text: "MOVIES",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "TV",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "GAMES",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "COLLECTIBLES",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "VIDEO",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "FANS",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "NEWS",
+                    url:"#",
+                    current: "false",
+                },
+                {
+                    text: "SHOP",
+                    url:"#",
+                    current: "false",
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -52,7 +101,7 @@ export default {
                     font-size: 18px;
                     font-weight: Bold;
 
-                    &.active {
+                    &:hover {
                         color: $cyanBandColor;
                         padding-bottom: 46px;
                         border-bottom: 5px solid $cyanBandColor;

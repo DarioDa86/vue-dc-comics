@@ -29,6 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../assets/style/common';
-  @import '../assets/style/variables';
+  @import '../src/assets/style/common';
+  @import '../src/assets/style/variables';
 </style>
+ 
