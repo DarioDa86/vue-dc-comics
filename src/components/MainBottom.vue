@@ -1,35 +1,51 @@
 <template>
   <main>
       <div class="container">
-        <div class="rowIcons">
-          <div class="iconInRow">
-            <img src="@/assets/images/buy-comics-digital-comics.png" alt="Digital Comics">
-            <p>DIGITAL COMICS</p>
-          </div>
-          <div class="iconInRow">
-            <img src="@/assets/images/buy-comics-merchandise.png" alt="DC Merchandise">
-            <p>DC MERCHANDISE</p>
-          </div>          
-          <div class="iconInRow">
-            <img src="@/assets/images/buy-comics-subscriptions.png" alt="Subscription">
-            <p>SUBSCRIPTION</p>
-          </div>          
-          <div class="iconInRow">
-            <img src="@/assets/images/buy-comics-shop-locator.png" alt="Comic shop locator">
-            <p>COMIC SHOP LOCATOR</p>
-          </div>          
-          <div class="iconInRow">
-            <img src="@/assets/images/buy-dc-power-visa.svg" alt="DC Power Visa">
-            <p>DC POWER VISA</p>
-          </div>
-        </div>
+        <ul class="rowIcons">
+          <li class="iconInRow" v-for="(icon, index) in icons" :key="index">
+            <a href=""><img :src="icon.image"></a>
+            <a href="">{{icon.text}}</a>
+          </li>
+        </ul>
       </div>
   </main>
 </template>
 
 <script>
 export default {
-  name: 'MainBottom'
+  name: 'MainBottom',
+    data() {
+      return {
+        icons: [
+          {
+            image: require("../assets/images/buy-comics-digital-comics.png"),
+            text: "DIGITAL COMICS",
+            url:"#",
+          },
+          {
+            image: require("../assets/images/buy-comics-merchandise.png"),
+            text: "DC MERCHANDISE",
+            url:"#",
+          },
+          {
+            image: require("../assets/images/buy-comics-subscriptions.png"),
+            text: "SUBSCRIPTION",
+            url:"#",
+          },
+          {
+            image: require("../assets/images/buy-comics-shop-locator.png"),
+            text: "COMIC SHOP LOCATOR",
+            url:"#",
+          },
+          {
+            image: require("../assets/images/buy-dc-power-visa.svg"),
+            text: "DC POWER VISA",
+            url:"#",
+          },
+          
+        ]
+      }
+    }
 }
 </script>
 
@@ -47,17 +63,14 @@ main {
       justify-content: space-evenly;
       padding: 30px 0;
 
-
       .iconInRow {
 
         display: flex;
         align-items: center;
-        color: #fff;
-        
-      &-:last-child img {
-          width: 55px;
-
-      }
+  
+          &:last-child img{
+            height: 40px;
+          }
 
         img {
           height: 55px;
@@ -65,8 +78,11 @@ main {
         }
 
 
-        p {
+        a {
           margin: 0 10px;
+          font-size: 18px;
+          color: #fff;
+          text-decoration: none;
         }
       }
     }
