@@ -1,8 +1,8 @@
 <template>
     <div class="card">
-        <img class="comics__image" src="prod.thumb" alt="comics.thumb">
+        <img class="comics__image" :src="card.thumb" :alt="card.thumb">
         <div class="text__image">
-            {{series}}
+            {{card.series}}
         </div>
     </div>
 </template>
@@ -10,17 +10,21 @@
 <script>
 export default {
     name: 'Card',
-    props: ['prod']
+    props: ['card']
 
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
     .card {
         width: 15%;
         height: 150px;
         border: 1px solid #fff;
         margin: 30px 5px;
+
+        .comics__image {
+            width: 100%;
+        }
     }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="comics-list, container">
-      <Card v-for="(card, index) in comics" :key="index" :prod="card" />
+      <Card v-for="(comic, index) in comics" :key="index" :card="comic" />
     </div>
   </section>
 </template>
