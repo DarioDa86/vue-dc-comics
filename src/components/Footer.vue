@@ -33,7 +33,7 @@
               <li><a href="#">CPSC Certificates</a></li>
               <li><a href="#">Ratings</a></li>
               <li><a href="#">Shop Help</a></li>
-              <li><a href="#">COntact Us</a></li>
+              <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
           <div class="col-3">

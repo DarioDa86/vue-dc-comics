@@ -1,8 +1,17 @@
 <template>
   <section>
+      <div class="current-tag">
+        CURRENT SERIES
+      </div>
     <div class="comics-list, container">
       <Card v-for="(comic, index) in comics" :key="index" :card="comic" />
     </div>
+    <div class="container">
+      <div class="load-btn">
+        <a href="#">LOAD MORE</a>
+      </div>
+    </div>
+
   </section>
 </template>
 
@@ -104,12 +113,39 @@ section {
   background-color: $mainTopBackColor;
   color: #fff;
 
+  .current-tag {
+    position: absolute;
+    margin-left: 14%;
+    transform: translate(0, -20px);
+    padding: 5px 20px;
+    background-color: $cyanBandColor;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
   .container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+    padding: 20px 0;
+
 
     .comics-list {
       margin: 30px 0;
+    }
+
+    .load-btn {
+      padding: 8px 60px;
+      
+      background-color: $cyanBandColor;
+      
+
+      a {
+        color: #fff;
+        font-size: 14px;
+      }
     }
   }
 }
