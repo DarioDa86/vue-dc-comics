@@ -1,11 +1,14 @@
 <template>
-    <div class="hero-container">
+    <div class="hero-container" :style="`background-image : url(${bgImage})`">
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Hero'
+    name: 'Hero',
+    props: [
+        'bgImage'
+    ]
 
 }
 </script>
@@ -13,7 +16,6 @@ export default {
 <style>
 
 .hero-container {
-    background-image: url(../assets/images/jumbotron.jpg);
     width: 100%;
     height: 350px;
     background-repeat: no-repeat;

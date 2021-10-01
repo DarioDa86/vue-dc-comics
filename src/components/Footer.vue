@@ -48,43 +48,46 @@
           </div>
         </div>
 
-        <div class="footerRight">
-          
-        </div>
-
+        <div class="footerRight"></div>
       </div>
-
-
     </div>
     <div class="bgFooter">
       <div class="bottomFooter container">
-
         <div class="signUp-Btn">
           <a href="#"><button>SIGN-UP NOW!</button></a>
         </div>
 
         <div class="socialIcons">
           <div class="textIcons">FOLLOW US</div>
-          <a href="#"><img src="../assets/images/footer-facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="../assets/images/footer-twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="../assets/images/footer-youtube.png" alt="Youtube"></a>
-          <a href="#"><img src="../assets/images/footer-pinterest.png" alt="Pinterest"></a>
-          <a href="#"><img src="../assets/images/footer-periscope.png" alt="Periscope"></a>
+          <a href="#"
+            ><img src="../assets/images/footer-facebook.png" alt="Facebook"
+          /></a>
+          <a href="#"
+            ><img src="../assets/images/footer-twitter.png" alt="Twitter"
+          /></a>
+          <a href="#"
+            ><img src="../assets/images/footer-youtube.png" alt="Youtube"
+          /></a>
+          <a href="#"
+            ><img src="../assets/images/footer-pinterest.png" alt="Pinterest"
+          /></a>
+          <a href="#"
+            ><img src="../assets/images/footer-periscope.png" alt="Periscope"
+          /></a>
         </div>
       </div>
-    </div> 
-
+    </div>
   </footer>
 </template>
 
 <script>
 export default {
-    name: 'Footer'
-}
+  name: "Footer",
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/variables';
+@import "../assets/style/variables";
 
 footer {
   background-image: url(../assets/images/footer-bg.jpg);
@@ -92,7 +95,7 @@ footer {
   background-size: cover;
 
   .topFooter {
-      display: flex;
+    display: flex;
 
     .footerLeft {
       display: flex;
@@ -100,15 +103,15 @@ footer {
       width: 30%;
       margin: 30px 0;
 
-      .col-1{
-        width: calc(100% / 3);
-      }
-      
-      .col-2{
+      .col-1 {
         width: calc(100% / 3);
       }
 
-      .col-3{
+      .col-2 {
+        width: calc(100% / 3);
+      }
+
+      .col-3 {
         width: calc(100% / 3);
       }
     }
@@ -117,50 +120,47 @@ footer {
       width: 70%;
       background-image: url(../assets/images/dc-logo-bg.png);
       background-repeat: no-repeat;
-      background-position: right center; 
-
+      background-position: right center;
     }
   }
 
-    .bgFooter {
-      background-color: $footerBottomBackColor;
+  .bgFooter {
+    background-color: $footerBottomBackColor;
 
+    .bottomFooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
 
-      .bottomFooter {
+      .signUp-Btn {
+        button {
+          padding: 15px 10px;
+          border-radius: 0;
+          border: 3px solid $cyanBandColor;
+          background-color: transparent;
+          color: #fff;
+          font-size: 16px;
+        }
+      }
+
+      .socialIcons {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
+        justify-content: space-between;
+        color: $cyanBandColor;
 
-        .signUp-Btn{
-
-          button {
-            padding: 15px 10px;
-            border-radius: 0;
-            border: 3px solid $cyanBandColor;
-            background-color: transparent;
-            color: #fff;
-            font-size: 16px;
-          }
+        img {
+          margin: 0 10px;
         }
 
-        .socialIcons {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          color: $cyanBandColor;
-
-          img {
-            margin: 0 10px;
-          }
-
-          .textIcons {
-            font-size: 18px;
-            font-weight: bold;
-            margin-right: 15px;
-          }
+        .textIcons {
+          font-size: 18px;
+          font-weight: bold;
+          margin-right: 15px;
         }
       }
     }
+  }
 }
 </style>

@@ -12,17 +12,15 @@
                 </ul>
             </nav>
         </div>
-        <Hero/>
+
     </header>
 </template>
 
 <script>
-import Hero from '../components/Hero.vue';
+
 export default {
     name: "Header",
-    components: {
-        Hero
-    },
+
     data() {
         return {
             menu: [
