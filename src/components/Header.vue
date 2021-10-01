@@ -1,23 +1,28 @@
 <template>
-  <header>
-      <div class="container">
-        <div class="logoDC">
-            <img src="@/assets/images/dc-logo.png" alt="Logo DC">
+    <header>
+        <div class="container">
+            <div class="logoDC">
+                <img src="../assets/images/dc-logo.png" alt="Logo DC">
+            </div>
+            <nav>
+                <ul>
+                    <li v-for="(link, index) in menu" :key="index">
+                        <a :href="link.url" >{{link.text}}</a> 
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li v-for="(link, index) in menu" :key="index">
-                    <a :href="link.url" >{{link.text}}</a> 
-                </li>
-            </ul>
-        </nav>
-      </div>
-  </header>
+        <Hero/>
+    </header>
 </template>
 
 <script>
+import Hero from '../components/Hero.vue';
 export default {
     name: "Header",
+    components: {
+        Hero
+    },
     data() {
         return {
             menu: [

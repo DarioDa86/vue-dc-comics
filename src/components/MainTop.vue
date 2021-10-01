@@ -1,14 +1,18 @@
 <template>
   <main>
     <div class="container">
-      <h2> --> Content goes here</h2>
+      <Card v-for="(card, index) in comics" :key="index" :prod="card"/>
     </div>
   </main>
 </template>
 
 <script>
+import Card from '../components/Card.vue';
 export default {
-  name: 'MainTop'
+  name: 'MainTop',
+  components: {
+    Card
+  }
 }
 </script>
 
@@ -21,9 +25,9 @@ main{
 
   .container {
 
-      h2 {
-      padding: 30px 0;
-      }
+    h2 {
+    padding: 30px 0;
+    }
   }
 }
 

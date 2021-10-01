@@ -60,7 +60,7 @@
       <div class="bottomFooter container">
 
         <div class="signUp-Btn">
-          <button>SIGN-UP NOW!</button>
+          <a href="#"><button>SIGN-UP NOW!</button></a>
         </div>
 
         <div class="socialIcons">
@@ -72,7 +72,7 @@
           <a href="#"><img src="../assets/images/footer-periscope.png" alt="Periscope"></a>
         </div>
       </div>
-    </div>
+    </div> 
 
   </footer>
 </template>
@@ -88,6 +88,8 @@ export default {
 
 footer {
   background-image: url(../assets/images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .topFooter {
       display: flex;
@@ -129,7 +131,6 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        // background-color: $footerBottomBackColor;
 
         .signUp-Btn{
 
